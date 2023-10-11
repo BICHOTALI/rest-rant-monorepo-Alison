@@ -67,6 +67,17 @@ function SignUpForm() {
 							name="email"
 						/>
 					</div>
+					<div>
+						<label>Password</label>
+						<input type="password" 
+							required 
+							value={user.password} 
+							onChange={e => setUser({ ...user, email: e.target.value})} 
+							className="form-control" 
+							id="password" 
+							name="password"
+						/>
+					</div>
 				</div>
 				<input className="btn btn-primary" type="submit" value="Sign Up" />
 			</form>
