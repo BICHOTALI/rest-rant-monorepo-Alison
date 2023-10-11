@@ -69,7 +69,8 @@ function SignUpForm() {
 					</div>
 					<div className="col-sm-6 form-group">
 						<label htmlFor="password">Password</label>
-						<input type="password" 
+						<input 
+							type="password" 
 							required 
 							value={user.password} 
 							onChange={e => setUser({ ...user, password: e.target.value})} 
