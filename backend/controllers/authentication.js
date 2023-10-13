@@ -15,6 +15,7 @@ router.post('/', async (req, res) => {
             message: `Could not find a user with the provided username and password`
         })
     } else {
+        req.session.userId = user.userId
         res.json({ user })
     }
 })
