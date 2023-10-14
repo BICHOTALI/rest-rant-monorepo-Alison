@@ -25,15 +25,24 @@ function Navigation() {
 
     if (currentUser) {
         loginActions = (
-            <li style={{ float: 'right' }}>
-                Logged in as {currentUser.firstName} {currentUser.lastName}
-                {/* // logout feature
-                {/* <a href="#/" onClick={() => {localStorage.removeItem(); window.location.reload()}}>
-                    Logout
-                </a> */}
-            </li>
-        )
-    }
+          <li style={{ float: 'right' }}>
+            Logged in as {currentUser.firstName} {currentUser.lastName}
+            {/* <a
+              className='logout'
+              href="#"
+              onClick={() => {
+                console.log('Logging out...')
+                // Clear the authentication cookie
+                document.cookie = "cookieSession=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                // Reload the page
+                window.location.reload();
+              }}
+            >
+              Logout
+            </a> */}
+          </li>
+        );
+      }
 
     return (
         <nav>
